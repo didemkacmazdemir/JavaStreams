@@ -31,8 +31,6 @@ Stream Methods
    Stream<String> s = Stream.of("one", "two", "three", "four");
   
    s.forEach(System.out::println);  
-   
-  
   
 2-) map
 
