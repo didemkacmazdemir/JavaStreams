@@ -10,11 +10,14 @@ Collection interface has two methods to generate a Stream.
 2-)parallelStream() − Returns a parallel Stream considering collection as its source.
 
 :: Method Reference
+
 :: is called Method Reference. It is basically a reference to a single method. I.e. it refers to an existing method by name.
+
 List<Integer> listOfIntegers = listOfStrings.stream()
                                         .map(Integer::valueOf)
                                         .collect(Collectors.toList());
-  equals
+ equals
+  
  List<Integer> listOfIntegers = listOfStrings.stream()
                                         .map( x -> Integer.valueOf(x))
                                         .collect(Collectors.toList()); 
@@ -27,12 +30,17 @@ Stream Methods
   
    Stream<String> s = Stream.of("one", "two", "three", "four");
   
-   s.forEach(System.out::println); // 
+   s.forEach(System.out::println);  
    
   
   
 2-) map
+
   The ‘map’ method is used to map each element to its corresponding result.
+  
+  Stream’i başka bir stream’e çevirmek için kullanılır. 
+  
+  Bir giren değere karşılık bir çıkan değer vardır(birebir map eder)
   
   every i corresponds i*i
   List<Integer> squaresList = numbers.stream().map( i -> i*i).distinct().collect(Collectors.toList());
