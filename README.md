@@ -26,6 +26,8 @@ Stream Methods
 
 1-) forEach
 
+  returns void
+
   Stream has provided a new method ‘forEach’ to iterate each element of the stream.
   
    Stream<String> s = Stream.of("one", "two", "three", "four");
@@ -34,6 +36,8 @@ Stream Methods
   
 2-) map
 
+  returns Stream
+
   The ‘map’ method is used to map each element to its corresponding result.
   
   Stream’i başka bir stream’e çevirmek için kullanılır. 
@@ -41,9 +45,13 @@ Stream Methods
   Bir giren değere karşılık bir çıkan değer vardır(birebir map eder)
   
   every i corresponds i*i
+  
   List<Integer> squaresList = numbers.stream().map( i -> i*i).distinct().collect(Collectors.toList());
   
 3-) filter
+
+  returns Stream
+
   The ‘filter’ method is used to eliminate elements based on a criteria.
   
   List<String>strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
