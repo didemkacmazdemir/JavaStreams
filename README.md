@@ -1,16 +1,35 @@
 # JavaStreams
 in Java 8, the Stream API is used to process collections of objects.(List, Set ve Queue).
+
 Using stream, you can process data in a declarative way(ifade eden sekilde) similar to SQL statements. 
+
 Collection interface has two methods to generate a Stream.
+
 1-)stream() − Returns a sequential stream considering collection as its source.
+
 2-)parallelStream() − Returns a parallel Stream considering collection as its source.
 
+:: Method Reference
+:: is called Method Reference. It is basically a reference to a single method. I.e. it refers to an existing method by name.
+List<Integer> listOfIntegers = listOfStrings.stream()
+                                        .map(Integer::valueOf)
+                                        .collect(Collectors.toList());
+  equals
+ List<Integer> listOfIntegers = listOfStrings.stream()
+                                        .map( x -> Integer.valueOf(x))
+                                        .collect(Collectors.toList()); 
+
 Stream Methods
+
 1-) forEach
+
   Stream has provided a new method ‘forEach’ to iterate each element of the stream.
   
    Stream<String> s = Stream.of("one", "two", "three", "four");
-   s.forEach(System.out::println);
+  
+   s.forEach(System.out::println); // 
+   
+  
   
 2-) map
   The ‘map’ method is used to map each element to its corresponding result.
