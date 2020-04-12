@@ -88,4 +88,33 @@ Stream Methods
       .stream()
       .filter( s -> s.length() > 2)
       .collect(Collectors.toCollection(ArrayList::new));
+8-)Reduce
+  
+  the Stream.reduce() combine elements of a stream and produces a single value.
+  
+  T reduce(T identity, BinaryOperator<T> accumulator);
+  
+  identity = default or initial value.
+  
+  BinaryOperator = functional interface, take two values and produces a new value.
+  
+  Example:
+  
+  int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
+  // 1st argument, init value = 0
+  
+  
+  int sum = Arrays.stream(numbers).reduce(0, (a, b) -> a + b);
+  
+ // int sum = Arrays.stream(numbers).reduce(0, Integer::sum); // Integer::sum 55 comes with java 1.8
+
+  System.out.println("sum : " + sum); // 55
+  
+   // |a|b|c|d|e , the initial | join is not what we want
+  
+  String[] strings = {"a", "b", "c", "d", "e"};
+     
+  String reduce = Arrays.stream(strings).reduce("", (a, b) -> a + "|" + b);
+  
+  
