@@ -88,6 +88,7 @@ Stream Methods
       .stream()
       .filter( s -> s.length() > 2)
       .collect(Collectors.toCollection(ArrayList::new));
+  
 8-)Reduce
   
   the Stream.reduce() combine elements of a stream and produces a single value.
